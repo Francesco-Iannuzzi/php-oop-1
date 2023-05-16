@@ -32,8 +32,6 @@ Bonus 2 (opzionale)
 
 */
 
-echo "<pre>";
-
 require __DIR__ . '/Models/Movie.php';
 
 $movies = [];
@@ -45,5 +43,3 @@ $django = new Movie('Django Unchained', 'Quentin Tarantino', 'Jamie Foxx', $genr
 $inception = new Movie('Inception', 'Christopher Nolan', 'Leonardo Di Caprio', $genre = ['Action', 'Science Fiction'], 2010);
 
 array_push($movies, $django, $inception);
-
-echo "</pre>";

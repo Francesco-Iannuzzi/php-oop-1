@@ -6,7 +6,7 @@ class Movie
     public $title;
     public $director;
     public $star;
-    public $genre = [];
+    public $genre;
     public $year;
 
     public function __construct(string $title, string $director, string $star, array $genre, int $year) {
