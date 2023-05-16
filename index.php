@@ -1,65 +1,6 @@
-<?php
+<?php 
 
-/*
-
-Oggi pomeriggio ripassate i primi concetti di classe, variabili e metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
-- è definita una classe ‘Movie’
-- all'interno della classe sono dichiarate delle variabili d'istanza
-- all'interno della classe è definito un costruttore
-- all'interno della classe è definito almeno un metodo
-
-vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà.
-Tra le varie proprietá, la classe Movie 'ha un' genere (sfruttare il concetto di composizione).
-
-
-
-Bonus 1:
-
-Creare un layout completo per stampare a schermo una lista di movies.
-Facciamo attenzione all’organizzazione del codice, suddividendolo in appositi file e cartelle.
-
-Possiamo ad esempio organizzare il codice:
-- creando un file dedicato ai dati (tipo le array di oggetti) che potremmo chiamare db.php
-- mettendo ciascuna classe nel proprio file e magari raggruppare tutte le classi in una cartella dedicata che possiamo chiamare Models/
-- organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati.
-
-
-
-Bonus 2 (opzionale)
-
-- Modificare la classe Movie in modo che accetti piú di un genere.
-
-*/
-
-
-echo "<pre>";
-
-require __DIR__ . '/Models/Movie.php';
-
-//first instance
-$django = new Movie('Django Unchained', 'Quentin Tarantino', 'Jamie Foxx', new Genre('Drama', 'Western'), 2012);
-/*
-$django->title = 'Django Unchained';
-$django->director = 'Quentin Tarantino';
-$django->star = 'Jamie Foxx';
-$django->genre = 'Drama'; genre primary Drama secondary Western
-$django->year = '2012';
-*/
-
-
-//second instance
-$inception = new Movie('Inception', 'Christopher Nolan', 'Leonardo Di Caprio', new Genre('Action', 'Science Fiction'), 2010);
-/*
-$inception->title = 'Inception';
-$inception->director = 'Christopher Nolan';
-$inception->star = 'Leonardo Di Caprio';
-$inception->genre = 'Action'; genre primary Action secondary Science Fiction
-$inception->year = '2010';
-*/
-
-var_dump($django, $inception);
-
-echo "<pre>";
+require __DIR__ . '/db.php'
 
 ?>
 
@@ -70,11 +11,54 @@ echo "<pre>";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- /Bootstrap Style -->
     <title>PHP OOP 1</title>
 </head>
 
 <body>
+    <header>
 
+        <nav class="nav justify-content-center py-3 bg-light">
+            <a class="nav-link text-danger" href="#">
+                <h6>Home</h6>
+            </a>
+            <a class="nav-link" href="#">
+                <h6>About</h6>
+            </a>
+            <a class="nav-link" href="#">
+                <h6>Contact</h6>
+            </a>
+        </nav>
+        <!-- /navbar -->
+
+    </header>
+    <!-- /header -->
+    <main class="bg-dark">
+        <div class="container w-75 text-light text-center py-5">
+
+            <div class="title">
+                <h1 class="text-secondary">Movies</h1>
+                <h3>Selected Movies</h3>
+            </div>
+            <!-- /.title -->
+
+            <div class="row">
+                <div class="card border-0 bg-secondary p-4 mt-5">
+                    <h1><?= $django->title ?></h1>
+                </div>
+                <!-- /card -->
+            </div>
+
+        </div>
+    </main>
+    <!-- /main -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <!-- /Bootstrap script -->
 </body>
 
 </html>
