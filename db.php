@@ -37,18 +37,16 @@ echo "<pre>";
 require __DIR__ . '/Models/Movie.php';
 require_once __DIR__ . '/Models/Genre.php';
 
+$movies = [];
+
 //first instance
 $django = new Movie('Django Unchained', 'Quentin Tarantino', 'Jamie Foxx', new Genre('Drama', 'Western'), 2012);
-
 
 //second instance
 $inception = new Movie('Inception', 'Christopher Nolan', 'Leonardo Di Caprio', new Genre('Action', 'Science Fiction'), 2010);
 
-var_dump($django, $inception);
 
-foreach ($django as $key => $value) {
-    echo $key;
-    echo $value;
-}
+array_push($movies, $django, $inception);
+//var_dump($movies);
 
 echo "</pre>";

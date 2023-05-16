@@ -45,13 +45,18 @@ require __DIR__ . '/db.php'
             <!-- /.title -->
 
             <div class="row">
+                <?php foreach ($movies as $movie) : ?>
                 <div class="col">
-                    <div class="card border-0 bg-secondary p-4 mt-5">
-                        <h2><?= $value ?></h2>
-                        <h2><?= $valueItem ?></h2>
+                    <div class="card text-start border-0 bg-secondary p-4 mt-5">
+                        <h1>Title: <?= $movie->title ?></h1>
+                        <h4>Director: <?= $movie->director ?></h4>
+                        <h4>Star: <?= $movie->star ?></h4>
+                        <h4>Year: <?= $movie->year ?></h4>
                     </div>
                     <!-- /card -->
                 </div>
+                <!-- /col -->
+                <?php endforeach; ?>
             </div>
 
         </div>

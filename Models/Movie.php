@@ -20,6 +20,5 @@ class Movie
         $this->star = $star;
         $this->genre = $genre;
         $this->year = $year;
-
     }
 }
