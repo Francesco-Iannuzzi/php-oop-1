@@ -1,6 +1,6 @@
 <?php 
 
-require __DIR__ . '/db.php'
+require __DIR__ . '/db.php';
 
 ?>
 
@@ -53,9 +53,10 @@ require __DIR__ . '/db.php'
                         <h4>Director: <?= $movie->director ?></h4>
                         <h4>Star: <?= $movie->star ?></h4>
                         <h4>Year: <?= $movie->year ?></h4>
-                        <?php foreach ($genre as $genreItem) : ?>
-                        <h4><?= $genreItem ?></h4>
-                        <?php endforeach; ?>
+                        <h4>Genre:<?php foreach ($genre as $genreItem) : ?>
+                            <span><?= $genreItem ?> - </span>
+                            <?php endforeach; ?>
+                        </h4>
                     </div>
                     <!-- /card -->
                 </div>

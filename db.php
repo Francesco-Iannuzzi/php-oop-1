@@ -39,10 +39,10 @@ require __DIR__ . '/Models/Movie.php';
 $movies = [];
 
 //first instance
-$django = new Movie('Django Unchained', 'Quentin Tarantino', 'Jamie Foxx', ['Drama', 'Western'], 2012);
+$django = new Movie('Django Unchained', 'Quentin Tarantino', 'Jamie Foxx', $genre = ['Drama', 'Western'], 2012);
 
 //second instance
-$inception = new Movie('Inception', 'Christopher Nolan', 'Leonardo Di Caprio', ['Action', 'Science Fiction'], 2010);
+$inception = new Movie('Inception', 'Christopher Nolan', 'Leonardo Di Caprio', $genre = ['Action', 'Science Fiction'], 2010);
 
 array_push($movies, $django, $inception);
 
