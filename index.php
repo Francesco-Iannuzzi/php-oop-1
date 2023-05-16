@@ -17,7 +17,7 @@ require __DIR__ . '/db.php'
     <title>PHP OOP 1</title>
 </head>
 
-<body>
+<body class="bg-dark">
     <header>
 
         <nav class="nav justify-content-center py-3 bg-light">
@@ -35,6 +35,7 @@ require __DIR__ . '/db.php'
 
     </header>
     <!-- /header -->
+
     <main class="bg-dark">
         <div class="container w-75 text-light text-center py-5">
 
@@ -52,6 +53,9 @@ require __DIR__ . '/db.php'
                         <h4>Director: <?= $movie->director ?></h4>
                         <h4>Star: <?= $movie->star ?></h4>
                         <h4>Year: <?= $movie->year ?></h4>
+                        <?php foreach ($genre as $genreItem) : ?>
+                        <h4><?= $genreItem ?></h4>
+                        <?php endforeach; ?>
                     </div>
                     <!-- /card -->
                 </div>
