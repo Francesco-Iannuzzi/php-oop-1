@@ -45,10 +45,13 @@ require __DIR__ . '/db.php'
             <!-- /.title -->
 
             <div class="row">
-                <div class="card border-0 bg-secondary p-4 mt-5">
-                    <h1><?= $django->title ?></h1>
+                <div class="col">
+                    <div class="card border-0 bg-secondary p-4 mt-5">
+                        <h2><?= $value ?></h2>
+                        <h2><?= $valueItem ?></h2>
+                    </div>
+                    <!-- /card -->
                 </div>
-                <!-- /card -->
             </div>
 
         </div>

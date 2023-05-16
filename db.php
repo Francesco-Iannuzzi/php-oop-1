@@ -29,6 +29,7 @@ Bonus 2 (opzionale)
 
 - Modificare la classe Movie in modo che accetti piú di un genere.
 
+
 */
 
 echo "<pre>";
@@ -45,5 +46,9 @@ $inception = new Movie('Inception', 'Christopher Nolan', 'Leonardo Di Caprio', n
 
 var_dump($django, $inception);
 
+foreach ($django as $key => $value) {
+    echo $key;
+    echo $value;
+}
 
 echo "</pre>";
