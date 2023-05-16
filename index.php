@@ -33,57 +33,29 @@ Bonus 2 (opzionale)
 
 
 echo "<pre>";
-//define the class
-class Movie
-{
-    //add class attribute
-    public $title;
-    public $director;
-    public $star;
-    public $genre;
-    public $year;
 
-    //add composition
-
-
-    //add a constructor
-    public function __construct(string $title, string $director, string $star, Genre $genre, int $year) {
-        $this->title = $title;
-        $this->director = $director;
-        $this->star = $star;
-        $this->genre = $genre;
-        $this->year = $year;
-
-    }
-}
-
-class Genre
-{
-    public $primary;
-    public $secondary;
-
-    public function __construct(string $primary, string $secondary) {
-        $this->primary = $primary;
-        $this->secondary = $secondary;
-    }
-}
+require __DIR__ . '/Models/Movie.php';
 
 //first instance
 $django = new Movie('Django Unchained', 'Quentin Tarantino', 'Jamie Foxx', new Genre('Drama', 'Western'), 2012);
-// $django->title = 'Django Unchained';
-// $django->director = 'Quentin Tarantino';
-// $django->star = 'Jamie Foxx';
-// $django->genre = 'Drama'; genre primary Drama secondary Western
-// $django->year = '2012';
+/*
+$django->title = 'Django Unchained';
+$django->director = 'Quentin Tarantino';
+$django->star = 'Jamie Foxx';
+$django->genre = 'Drama'; genre primary Drama secondary Western
+$django->year = '2012';
+*/
 
 
 //second instance
 $inception = new Movie('Inception', 'Christopher Nolan', 'Leonardo Di Caprio', new Genre('Action', 'Science Fiction'), 2010);
-// $inception->title = 'Inception';
-// $inception->director = 'Christopher Nolan';
-// $inception->star = 'Leonardo Di Caprio';
-// $inception->genre = 'Action'; genre primary Action secondary Science Fiction
-// $inception->year = '2010';
+/*
+$inception->title = 'Inception';
+$inception->director = 'Christopher Nolan';
+$inception->star = 'Leonardo Di Caprio';
+$inception->genre = 'Action'; genre primary Action secondary Science Fiction
+$inception->year = '2010';
+*/
 
 var_dump($django, $inception);
 
