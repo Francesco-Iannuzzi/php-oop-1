@@ -32,7 +32,7 @@ Bonus 2 (opzionale)
 
 */
 
-require __DIR__ . '/Models/Movie.php';
+require __DIR__ . '../../Models/Movie.php';
 
 $movies = [];
 
