@@ -45,25 +45,28 @@ require __DIR__ . '/db.php';
             </div>
             <!-- /.title -->
 
-            <div class="row">
+            <div class="row py-5">
                 <?php foreach ($movies as $movie) : ?>
                 <div class="col">
-                    <div class="card text-start border-0 bg-secondary p-4 mt-5">
-                        <h1>Title: <?= $movie->title ?></h1>
-                        <h4>Director: <?= $movie->director ?></h4>
-                        <h4>Star: <?= $movie->star ?></h4>
-                        <h4>Year: <?= $movie->year ?></h4>
-                        <h4>Genre:<?php foreach ($genre as $genreItem) : ?>
-                            <span><?= $genreItem ?> - </span>
-                            <?php endforeach; ?>
-                        </h4>
+                    <div class="card border-0" style="width: 18rem;">
+                        <img src="<?= $movie->cover ?>" class="card-img-top img-fluid">
+                        <div class="card-body bg-secondary">
+                            <h4 class="card-title">Title: <?= $movie->title ?></h4>
+                            <h6>Director: <?= $movie->director ?></h6>
+                            <h6>Star: <?= $movie->star ?></h6>
+                            <h6>Year: <?= $movie->year ?></h6>
+                            <h6>Genre:
+                                <?php foreach ($genre as $genreItem) : ?>
+                                <span><?= $genreItem ?> - </span>
+                                <?php endforeach; ?>
+                            </h6>
+                        </div>
                     </div>
                     <!-- /card -->
                 </div>
                 <!-- /col -->
                 <?php endforeach; ?>
             </div>
-
         </div>
     </main>
     <!-- /main -->
