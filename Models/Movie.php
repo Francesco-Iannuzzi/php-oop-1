@@ -2,15 +2,8 @@
 
 class Movie
 {
-    //add class attribute
-    public $title;
-    public $director;
-    public $star;
-    public $genres;
-    public $year;
-    public $cover;
 
-    public function __construct(string $title, string $director, string $star, array $genres, int $year, string $cover) {
+    public function __construct(public string $title,public string $director,public string $star,public array $genres,public int $year,public string $cover) {
         $this->title = $title;
         $this->director = $director;
         $this->star = $star;
