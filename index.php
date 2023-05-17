@@ -47,7 +47,7 @@ require __DIR__ . '/Database/db.php';
 
             <div class="row py-5">
                 <?php foreach ($movies as $movie) : ?>
-                <div class="col">
+                <div class="col d-flex justify-content-center">
                     <div class="card border-0" style="width: 18rem;">
                         <img src="<?= $movie->cover ?>" class="card-img-top img-fluid">
                         <div class="card-body bg-secondary">
