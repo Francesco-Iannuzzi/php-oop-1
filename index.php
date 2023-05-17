@@ -56,8 +56,8 @@ require __DIR__ . '/Database/db.php';
                             <h6>Star: <?= $movie->star ?></h6>
                             <h6>Year: <?= $movie->year ?></h6>
                             <h6>Genre:
-                                <?php foreach ($genre as $genreItem) : ?>
-                                <span><?= $genreItem ?> - </span>
+                                <?php foreach ($genres as $genre) : ?>
+                                <span><?= $genre ?> - </span>
                                 <?php endforeach; ?>
                             </h6>
                         </div>

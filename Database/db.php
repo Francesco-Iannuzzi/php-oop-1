@@ -37,9 +37,9 @@ require __DIR__ . '../../Models/Movie.php';
 $movies = [];
 
 //first instance
-$django = new Movie('Django Unchained', 'Quentin Tarantino', 'Jamie Foxx', $genre = ['Drama', 'Western'], 2012, './assets/img/django_cover.png');
+$django = new Movie('Django Unchained', 'Quentin Tarantino', 'Jamie Foxx', $genres = ['Drama', 'Western'], 2012, './assets/img/django_cover.png');
 
 //second instance
-$inception = new Movie('Inception', 'Christopher Nolan', 'Leonardo Di Caprio', $genre = ['Action', 'Science Fiction'], 2010, './assets/img/inception_cover.png');
+$inception = new Movie('Inception', 'Christopher Nolan', 'Leonardo Di Caprio', $genres = ['Action', 'Science Fiction'], 2010, './assets/img/inception_cover.png');
 
 array_push($movies, $django, $inception);
